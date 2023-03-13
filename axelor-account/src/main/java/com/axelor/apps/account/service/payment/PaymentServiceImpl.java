@@ -161,6 +161,9 @@ public class PaymentServiceImpl implements PaymentService {
                 }
               }
             }
+            if (creditMoveLine.getAmountRemaining().compareTo(BigDecimal.ZERO) > 0) {
+              break;
+            }
           }
         }
       }
